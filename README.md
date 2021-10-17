@@ -2,8 +2,8 @@
 
 ## Test scenarios
 - Login - To enter into any application , suceessful login is required. The scenarios includes successful login and unsuccessful login when user enters invalid username or password.
-- Book serach - This includes the search for perticular book and verify the result as per search criteria
-- Modal Dialogs - Inclused actions performed on modal dialogs
+- Book serach - This includes the search for particular book and verify the result as per search criteria
+- Modal Dialogs - Includes actions performed on modal dialogs
 
 ## Run tests locally
 - Clone this repo

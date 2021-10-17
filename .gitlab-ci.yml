@@ -60,6 +60,7 @@ cypress-e2e:
 
 api:e2e:
   image: postman/newman
+  entrypoint: [""]
   stage: test
   before_script:
     - apk add zip unzip curl
