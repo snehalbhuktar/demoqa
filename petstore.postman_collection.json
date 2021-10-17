@@ -104,7 +104,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/store/order/1",
+					"raw": "{{url}}/store/order/0",
 					"host": [
 						"{{url}}"
 					],
