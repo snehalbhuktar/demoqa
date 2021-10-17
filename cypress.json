@@ -1,8 +1,11 @@
 {
+    "baseUrl": "https://demoqa.com",
     "chromeWebSecurity": false,
     "defaultCommandRimeout": 90000,
     "pageLoadTimeut": 90000,
     "requestTimeout": 60000,
+    "viewportWidth": 1024,
+    "viewportHeight": 667,
     "projectId": "jyz47c",
     "reporter": "mochawesome-screenshots",
     "screenshotsFolder": "./myReport/screenshots",

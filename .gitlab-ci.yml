@@ -42,19 +42,19 @@ cypress-e2e:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests in parallel
-    - npx cypress run --record --key ${CYPRESS_RECORD_KEY} --browser chrome --group "UI - Chrome"
-    - zip -r ./myReport/screenshots.zip ./myReport/screenshots
+    - npx cypress run --browser chrome
   artifacts:
     expire_in: 1 week
     when: always
     paths:
       - ./myReport
   after_script:
+    - zip -r ./myReport/screenshots.zip ./myReport/screenshots
     - curl -X POST
       --header "Content-Type:multipart/form-data"
       -H "x-api-key:${CALLIOPE_API_KEY}"
       -F "file[]=@myReport/myTestProfile.json"
       -F "attachment[]=@myReport/myTestProfile.html"
       -F "attachment[]=@myReport/screenshots.zip"
-      "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?os=RSpec&platform=$CI_COMMIT_REF_SLUG&build=$REVISION"
+      "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?os=RSpec&platform=$CI_COMMIT_REF_SLUG&build=$REVISION&formatter=mochawesome"
 

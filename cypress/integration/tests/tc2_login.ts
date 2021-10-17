@@ -4,6 +4,7 @@ describe('When user is on Book store login page', () => {
     const homePage = new pages.HomePage;
     const bookStorePage = new pages.BookStorePage;
     const loginPage = new pages.LoginPage;
+    const profilePage = new pages.ProfilePage
 
     beforeEach(() => {
         homePage.visitApplication();
@@ -16,6 +17,11 @@ describe('When user is on Book store login page', () => {
         // Assertions for successful login
         cy.get('#userName-value').should('be.visible')
             .should('contain', 'test_user');
+        // Logout from application
+        profilePage.logout();
+        // Assertion - user navigates to Login page 
+        cy.url().should('contain', 'login');
+        
     })
 
     it('Then user is not able to login with inval username and password', () => {
