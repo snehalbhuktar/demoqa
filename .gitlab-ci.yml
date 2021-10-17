@@ -63,6 +63,7 @@ api:e2e:
     name: postman/newman
     entrypoint: [""]
   stage: test
+  cache: []
   before_script:
     - apk add zip unzip curl
   script:
