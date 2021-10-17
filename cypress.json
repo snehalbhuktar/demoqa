@@ -6,6 +6,8 @@
     "requestTimeout": 60000,
     "viewportWidth": 1024,
     "viewportHeight": 667,
+    "video": false,
+    "videouUploadOnPasses": false,
     "projectId": "jyz47c",
     "reporter": "mochawesome-screenshots",
     "screenshotsFolder": "./myReport/screenshots",

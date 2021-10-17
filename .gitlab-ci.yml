@@ -58,3 +58,20 @@ cypress-e2e:
       -F "attachment[]=@myReport/screenshots.zip"
       "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?os=RSpec&platform=$CI_COMMIT_REF_SLUG&build=$REVISION&formatter=mochawesome"
 
+api:e2e:
+  image: postman/newman
+  stage: test
+  before_script:
+    - apk add zip unzip curl
+  script:
+    - newman run petstore.postman_collection.json -e peststore_swagger.postman_environment.json -r cli,json
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - newman_result.zip
+  after_script:
+    - cd newman; zip -r ../newman_result.zip *.json; cd ..
+    - curl -X POST -H "x-api-key: ${API_KEY}"
+      -F file[]=@newman_result.zip
+      "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import" -k

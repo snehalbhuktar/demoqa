@@ -3,6 +3,8 @@ import BookStorePage from "./book_store_page";
 import LoginPage from "./login_page";
 import ProfilePage from "./profile_page";;
 import RegisterPage from "./register_page";
+import AlertsWindowsPage from "./alerts_windows_page";
+import ModalDialogsPage from "./modal_dialogs_page";
 
 export{
     HomePage,
@@ -10,4 +12,6 @@ export{
     LoginPage,
     ProfilePage,
     RegisterPage,
+    AlertsWindowsPage,
+    ModalDialogsPage,
 }
