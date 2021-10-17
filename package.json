@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/snehalbhuktar/demoqa#readme",
   "devDependencies": {
-    "cypress": "8.6.0"
+    "cypress": "8.6.0",
+    "mochawesome-screenshots": "^1.6.0"
   }
 }
