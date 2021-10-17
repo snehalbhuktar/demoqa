@@ -19,9 +19,9 @@ export default class RegisterPage{
             .and('not.be.empty')
             .then(cy.wrap)
             .find('#recaptcha-anchor')
-            // .should('be.visible')
+            .should('be.visible')
             .click({force: true});
-        // cy.get(this.checkBox).click();
+        // cy.get(this.checkBox).click({force: true});
         cy.get(this.registerButton).click();
     }
 
