@@ -2,5 +2,6 @@
     "chromeWebSecurity": false,
     "defaultCommandRimeout": 60000,
     "pageLoadTimeut": 60000,
-    "requestTimeout": 20000
+    "requestTimeout": 20000,
+    "projectId": "jyz47c"
 }
