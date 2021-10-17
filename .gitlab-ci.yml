@@ -53,9 +53,9 @@ cypress-e2e:
   after_script:
     - curl -X POST
       --header "Content-Type:multipart/form-data"
-      --H "x-api-key:${CALLIOPE_API_KEY}"
-      --F "file[]=@myReport/myTestProfile.json"
-      --F "attachment[]=@myReport/myTestProfile.html"
-      --F "attachment[]=@myReport/screenshots.zip"
+      -H "x-api-key:${CALLIOPE_API_KEY}"
+      -F "file[]=@myReport/myTestProfile.json"
+      -F "attachment[]=@myReport/myTestProfile.html"
+      -F "attachment[]=@myReport/screenshots.zip"
       "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?os=RSpec&platform=$CI_COMMIT_REF_SLUG&build=$REVISION"
 
