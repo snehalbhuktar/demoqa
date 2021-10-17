@@ -104,14 +104,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/store/order/0",
+					"raw": "{{url}}/store/order/7",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"store",
 						"order",
-						"1"
+						"7"
 					]
 				}
 			},

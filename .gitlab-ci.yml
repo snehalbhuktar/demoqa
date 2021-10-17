@@ -77,4 +77,4 @@ api:e2e:
     - cd newman; zip -r ../newman_result.zip *.json; cd ..
     - curl -X POST -H "x-api-key:${CALLIOPE_API_KEY}"
       -F file[]=@newman_result.zip
-      "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import" -k
+      "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?formatter=newmanjson" -k
