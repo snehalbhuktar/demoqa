@@ -11,7 +11,7 @@ describe('When user is on Book store login page', () => {
         homePage.navigateToBookStoreApplication();
     });
 
-    it('Then user is able to login successfully', () => {
+    it('Then user is able to login with valid credentials and logout successfully', () => {
         bookStorePage.nvaigateToLoginPage()
         loginPage.loginToBookStoreApplication('test_user', 'P@ssword11');
         // Assertions for successful login
@@ -24,7 +24,7 @@ describe('When user is on Book store login page', () => {
         
     })
 
-    it('Then user is not able to login with inval username and password', () => {
+    it('Then user is not able to login with invalid password', () => {
         bookStorePage.nvaigateToLoginPage()
         loginPage.loginToBookStoreApplication('test_user', '123');
         // Assertions for login failed

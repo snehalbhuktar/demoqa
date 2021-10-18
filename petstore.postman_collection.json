@@ -15,7 +15,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"tests[\"Response body is not empty\"] = (responseBody!=null);"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -47,7 +47,11 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"tests[\"Response body is not empty\"] = (responseBody!=null);"
+							"",
+							"// pm.test(\"Response is json and has status placed\", function (){",
+							"//     const responseJson = pm.response.json();",
+							"//     pm.expect(responseJson.status).to.eql(\"placed\");",
+							"// });"
 						],
 						"type": "text/javascript"
 					}
@@ -85,39 +89,6 @@
 			"response": []
 		},
 		{
-			"name": "delete_order",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"tests[\"Response body is not empty\"] = (responseBody!=null);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/store/order/7",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"store",
-						"order",
-						"7"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "update_user",
 			"event": [
 				{
@@ -127,7 +98,11 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"tests[\"Response body is not empty\"] = (responseBody!=null);"
+							"",
+							"// pm.test(\"Response is json and has element code 200\", function (){",
+							"//     const responseJson = pm.response.json();",
+							"//     pm.expect(responseJson.code).to.eql(200);",
+							"// });"
 						],
 						"type": "text/javascript"
 					}
@@ -174,15 +149,14 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"tests[\"Response body is not empty\"] = (responseBody!=null);",
 							"",
-							"let jsonData = pm.response.json()",
+							"// let jsonData = pm.response.json()",
 							"",
-							"pm.test('The `status` contains pending', () => {",
-							"    _.each(jsonData.Fee, (item) => {",
-							"        pm.expect(item.status).to.equal('pending')",
-							"    })",
-							"})"
+							"// pm.test('The `status` contains pending', () => {",
+							"//     _.each(jsonData, (item) => {",
+							"//         pm.expect(item.status).to.equal('pending')",
+							"//     })",
+							"// })"
 						],
 						"type": "text/javascript"
 					}
