@@ -43,7 +43,7 @@ cypress-e2e:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests in parallel
-    - npx cypress run --parallel --browser chrome
+    - npx cypress run --record false --parallel --browser chrome
   artifacts:
     expire_in: 1 week
     when: always
