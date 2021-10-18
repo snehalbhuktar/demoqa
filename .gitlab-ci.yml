@@ -36,13 +36,14 @@ install:
 cypress-e2e:
   image: cypress/browsers:node16.5.0-chrome94-ff93
   stage: test
+  parallel: 4
   before_script:
     - apt-get install -y zip
   script:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests in parallel
-    - npx cypress run --browser chrome
+    - npx cypress run --parallel --browser chrome
   artifacts:
     expire_in: 1 week
     when: always
