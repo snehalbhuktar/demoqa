@@ -48,10 +48,10 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"// pm.test(\"Response is json and has status placed\", function (){",
-							"//     const responseJson = pm.response.json();",
-							"//     pm.expect(responseJson.status).to.eql(\"placed\");",
-							"// });"
+							"pm.test(\"Response is json and has status placed\", function (){",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.status).to.eql(\"placed\");",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -99,10 +99,10 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"// pm.test(\"Response is json and has element code 200\", function (){",
-							"//     const responseJson = pm.response.json();",
-							"//     pm.expect(responseJson.code).to.eql(200);",
-							"// });"
+							"pm.test(\"Response is json and has element code 200\", function (){",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.code).to.eql(200);",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -150,13 +150,13 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"// let jsonData = pm.response.json()",
+							"let jsonData = pm.response.json()",
 							"",
-							"// pm.test('The `status` contains pending', () => {",
-							"//     _.each(jsonData, (item) => {",
-							"//         pm.expect(item.status).to.equal('pending')",
-							"//     })",
-							"// })"
+							"pm.test('The `status` contains pending', () => {",
+							"    _.each(jsonData, (item) => {",
+							"        pm.expect(item.status).to.equal('pending')",
+							"    })",
+							"})"
 						],
 						"type": "text/javascript"
 					}
