@@ -47,15 +47,15 @@ cypress-e2e:
     expire_in: 1 week
     when: always
     paths:
-      - ./myReport
+      - ./cypress/report
   after_script:
-    - zip -r ./myReport/screenshots.zip ./myReport/screenshots
+    - npx mochawesome-merge cypress/report/*.json > cypress/report/report.json
+    - npx marge --inline cypress/report/report.json -o cypress/report
     - curl -X POST
       --header "Content-Type:multipart/form-data"
       -H "x-api-key:${CALLIOPE_API_KEY}"
-      -F "file[]=@myReport/myTestProfile.json"
-      -F "attachment[]=@myReport/myTestProfile.html"
-      -F "attachment[]=@myReport/screenshots.zip"
+      -F "file[]=@cypress/report/report.json"
+      -F "attachment[]=@cypress/report/report.html"
       "https://app.calliope.pro/api/v2/profile/"${CALLIOPE_PROFILE_ID}"/import/?os=RSpec&platform=$CI_COMMIT_REF_SLUG&build=$REVISION&formatter=mochawesome"
 
 api:e2e:
