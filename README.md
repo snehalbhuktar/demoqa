@@ -33,7 +33,7 @@
   $ git push
   ```
 ## Results
-Results are integrated with [Calliope.pro](https://app.calliope.pro/profiles/3762/reports)
+Results are integrated with [Calliope.pro](https://app.calliope.pro/reports/104283/public/a67f5dfb-9e8d-416a-af1b-26ac5351ec94)
 
 # PetStore swagger API - Postman
 
@@ -58,5 +58,5 @@ Results are integrated with [Calliope.pro](https://app.calliope.pro/profiles/376
   ```
 
 ## Results
-Results are integrated with [Calliope.pro](https://app.calliope.pro/profiles/3762/reports)
+Results are integrated with [Calliope.pro](https://app.calliope.pro/reports/104282/public/6b3dc563-e113-4d8c-9e7a-75c54dab44c9)
 
