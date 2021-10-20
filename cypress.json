@@ -8,7 +8,6 @@
     "viewportHeight": 667,
     "video": false,
     "videouUploadOnPasses": false,
-    "projectId": "jyz47c",
     "reporter": "mochawesome",
     "reporterOptions": {
         "reportDir": "cypress/report",
